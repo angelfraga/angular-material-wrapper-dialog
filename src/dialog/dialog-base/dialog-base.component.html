@@ -1,0 +1,9 @@
+<div *ngIf="data && data.header">
+  <ng-container *ngTemplateOutlet="data?.header"></ng-container>
+</div>
+<div *ngIf="data && data.body" mat-dialog-content>
+  <ng-container *ngTemplateOutlet="data?.body"></ng-container>
+</div>
+<div *ngIf="data && data.footer" mat-dialog-actions>
+  <ng-container *ngTemplateOutlet="data?.footer"></ng-container>
+</div>

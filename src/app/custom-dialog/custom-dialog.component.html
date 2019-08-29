@@ -1,0 +1,15 @@
+<dialog [open]="open" #dialog (openChange)="openChange.emit(false)">
+  <dialog-header>
+    <h1 mat-dialog-title>Hi {{name}}</h1>
+  </dialog-header>
+  <dialog-body>
+    <p>What's your favorite animal?</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="animal">
+    </mat-form-field>
+  </dialog-body>
+  <dialog-footer>
+    <button mat-button (click)="dialog.close()">No Thanks</button>
+    <button mat-button (click)="saveAndClose()" cdkFocusInitial>Ok</button>
+  </dialog-footer>
+</dialog>
