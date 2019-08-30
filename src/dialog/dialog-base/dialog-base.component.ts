@@ -1,4 +1,4 @@
-import { Component, ContentChild , Inject, EventEmitter, ViewChild, Input, Output } from '@angular/core';
+import { Component, ContentChild , Inject, EventEmitter, ViewChild, Input, Output, TemplateRef } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { DialogHeaderComponent } from './../dialog-header/dialog-header.component';
@@ -17,9 +17,9 @@ export class DialogBaseComponent {
     public dialogRef: MatDialogRef<DialogBaseComponent>,
     @Inject(MAT_DIALOG_DATA)
     public data: {
-      header?: EmbeddedViewRef,
-      body?: EmbeddedViewRef,
-      footer?: EmbeddedViewRef,
+      header?: TemplateRef,
+      body?: TemplateRef,
+      footer?: TemplateRef,
     }
   ) { }
 }
